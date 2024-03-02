@@ -41,9 +41,4 @@ body {
                            [sidebar-end full-start] minmax(6rem, 1fr) // we want no less than 6rem padding
                            [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) // this columns get names col-start 1, 2, 3 etc.
                            [center-end] minmax(6rem, 1fr) [full-end];
-    
-    & > * {
-        padding: 4rem;
-        font-size: 3rem;
-    }
 }

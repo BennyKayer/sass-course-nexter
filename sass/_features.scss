@@ -1,4 +1,30 @@
 .features {
-    background-color: $color-grey-light-2;
     grid-column: center-start / center-end;
+    margin: 15rem 0;
+
+    display: grid;
+    // grid-template-columns: repeat(3, 1fr); // not enough let's complicated a bit for responsivennes...
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr)); // columns no less than 250px, how many can you fit?
+    // grid-template-rows: repeat(2, auto); // this is implicit, no need to specify
+    align-items: start;
+    gap: 6rem;
+}
+
+.feature {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    row-gap: 1.5rem;
+    column-gap: 2.5rem;
+
+    &__icon {
+        fill: $color-primary;
+        width: 4.5rem;
+        height: 4.5rem;
+        grid-row: 1 / span 2; // -1 won't work, -1 is the the last EXPLICIT line, here grid is IMPLICICT
+        transform: translateY(-1rem);
+    }
+
+    &__text {
+        font-size: 1.7rem;
+    }
 }
