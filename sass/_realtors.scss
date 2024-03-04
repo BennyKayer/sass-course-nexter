@@ -9,12 +9,26 @@
     row-gap: 2rem;
     justify-items: center; // inside cell
 
+    @media only screen and (max-width: $bp-medium) {
+        grid-column: 1 / -1;
+    }
+    @media only screen and (max-width: $bp-small) {
+        padding: 5rem;
+    }
+
     &__list {
         display: grid;
         grid-template-columns: 7rem max-content;
         column-gap: 2rem;
         row-gap: 5vh;
         align-items: center;
+
+        @media only screen and (max-width: $bp-medium) {
+            grid-template-columns: repeat(3, 7rem max-content );
+        }
+        @media only screen and (max-width: $bp-small) {
+            grid-template-columns: 7rem max-content;
+        }
     }
 
     &__img {
